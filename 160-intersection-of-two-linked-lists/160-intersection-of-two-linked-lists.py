@@ -10,12 +10,10 @@ class Solution:
         travel2 = headB
         switch = 0
         while travel1 is not None:
-            print()
-            print(travel1.val, travel2.val)
+            # print()
+            # print(travel1.val, travel2.val)
             if travel1 == travel2:
-                print("done")
-
-                break
+                return travel1
             travel1 = travel1.next
             travel2 = travel2.next
             # print(travel1, travel2)
@@ -25,19 +23,13 @@ class Solution:
             if travel1 == None and switch < 2:
                 travel1 = headB
                 switch += 1
-                print("switch 1")
+                # print("switch 1")
             if travel2 == None and switch < 2:
                 travel2 = headA
                 switch += 1
-                print("switch 2")
+                # print("switch 2")
             if travel1 == travel2:
-                print("done")
-                print()
-                # print(travel1.val, travel2.val)
-                break
-            print(travel1.val, travel2.val)
-        print(travel1)
-        print()
-        print(travel2)
-    
+                # print("done")
+                return travel1
+            # print(travel1.val, travel2.val)
         return travel1
