@@ -28,8 +28,8 @@ class Solution:
                 travel2 = headA
                 switch += 1
                 # print("switch 2")
-            if travel1 == travel2:
-                # print("done")
-                return travel1
+            # if travel1 == travel2:
+            #     # print("done")
+            #     return travel1
             # print(travel1.val, travel2.val)
         return travel1
