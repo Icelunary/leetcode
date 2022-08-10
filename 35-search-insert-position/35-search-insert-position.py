@@ -14,8 +14,10 @@ class Solution:
             else:
                 # print("case0")
                 return mid
+        # print(nums[mid])
+        mid = (start + end) // 2
         if nums[start] < target:
-            # print("case2")
+            print("case2")
             return start+1
         else:
             return start
