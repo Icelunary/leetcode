@@ -17,10 +17,10 @@ class Solution:
         # print(nums[mid])
         mid = (start + end) // 2
         print(start, end, mid)
-        if nums[start] > target:
-            print("case1")
-            return start
-        elif nums[start] < target:
+        # if nums[start] > target:
+        #     print("case1")
+        #     return start
+        if nums[start] < target:
             print("case2")
             return start+1
         else:
