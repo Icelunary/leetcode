@@ -5,7 +5,7 @@ class Solution:
         for person in range(people_num):
             person_in_size = groupSizes[person]
             groups_temp[person_in_size].append(person)
-        print(groups_temp)
+        # print(groups_temp)
         groups = []
         for size in range(people_num + 1):
             if groups_temp[size]:
