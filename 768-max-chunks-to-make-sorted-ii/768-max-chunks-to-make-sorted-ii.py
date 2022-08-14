@@ -11,10 +11,7 @@ class Solution:
             currentIndex = trunk_nums - 1
             # print(currentIndex, trunk_nums, trunks)
             if ele < trunks[currentIndex] and trunk_nums > 1:
-                print("merge")
                 trunk_nums, current_max = self.mergeTrunk(trunks, trunk_nums, ele, current_max)
-            print(trunks)
-        print(trunks, current_max)
         return trunk_nums
     
     
@@ -25,7 +22,6 @@ class Solution:
             trunks[preTrunkIndex] = current_max
             del trunks[trunk_nums - 1]
             trunk_nums -= 1
-            print("decreased trunk number", trunk_nums)
             return self.mergeTrunk(trunks, trunk_nums, ele, current_max)
         return trunk_nums, current_max
             
