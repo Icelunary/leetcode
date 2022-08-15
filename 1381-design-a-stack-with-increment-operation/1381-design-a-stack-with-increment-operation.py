@@ -13,7 +13,9 @@ class CustomStack:
     def pop(self) -> int:
         if self.count > 0:
             self.count -= 1
-            return self.stack.pop()
+            ele = self.stack[-1]
+            del self.stack[-1]
+            return ele
         else:
             return -1
         
