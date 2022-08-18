@@ -7,8 +7,6 @@
 class Solution:
     def deepestLeavesSum(self, root: Optional[TreeNode]) -> int:
         level_list = [root]
-        total = 0
-        
         while level_list:
             total = 0
             for i in range(len(level_list)):
@@ -16,4 +14,4 @@ class Solution:
                 if (level_list[0].left is not None): level_list.append(level_list[0].left)
                 if (level_list[0].right is not None): level_list.append(level_list[0].right)
                 del level_list[0]
-        return total
+            if not level_list: return total
