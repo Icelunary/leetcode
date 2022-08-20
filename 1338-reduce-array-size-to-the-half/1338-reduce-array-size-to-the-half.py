@@ -7,9 +7,9 @@ class Solution:
                 myDic[i] += 1
             else:
                 myDic[i] = 1
-        print(myDic.values())
+        # print(myDic.values())
         sorted_list = sorted(list(myDic.values()), reverse = True)
-        print(sorted_list)
+        # print(sorted_list)
         for i in range(len(sorted_list)):
             target -= sorted_list[i]
             if target <= 0:
