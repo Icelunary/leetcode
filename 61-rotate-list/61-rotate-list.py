@@ -14,17 +14,15 @@ class Solution:
             length_count += 1
             current_node = current_node.next
         
-        print(length_count)
+        # print(length_count)
         last_node = current_node
         last_node.next = head
         current_node = head
-        print(k%length_count)
+        # print(k%length_count)
         dis = length_count - (k % length_count) - 1
-        print(dis)
+        # print(dis)
         for i in range(dis):
             current_node = current_node.next
-        
-        print(current_node.val)
         new_head = current_node.next
         current_node.next = None
         return new_head
