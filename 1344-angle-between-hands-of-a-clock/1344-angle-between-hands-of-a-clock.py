@@ -1,5 +1,3 @@
-
-
 class Solution:
     HALF_SCALE = 30
     def angleClock(self, hour: int, minutes: int) -> float:
