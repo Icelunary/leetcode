@@ -15,12 +15,12 @@ class Solution:
             visit = [0 for i in range(len(arr))]
             n = len(arr)
             dis = 0
-            q = [0]
+            q = deque([0])
             cnt = 0
             while q:
                 for i in range(len(q)):
                     # print(dis, q)
-                    index = q.pop(0)
+                    index = q.popleft()
                     node = arr[index]
                     value = node
                     visit[index] = 1
