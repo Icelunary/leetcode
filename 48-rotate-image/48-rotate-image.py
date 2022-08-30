@@ -4,6 +4,8 @@ class Solution:
         Do not return anything, modify matrix in-place instead.
         """
         n = len(matrix)
+        if n == 1:
+            return 
         # Get everything that need to be rotated in the first quadrant
         row, col = self.get_rotate_area(n)
         # print(row, col)
@@ -19,14 +21,13 @@ class Solution:
                     temp_r = cell[0]
                     temp_c = cell[1]
                     value.append(matrix[temp_r][temp_c])
-                print(rotate_list)
-                print(value)
                 # matrix[rotate_list[0][0]][rotate_list[0][1]] = value[-1]
                 # Rotate their values
                 for i in range(0, len(rotate_list)):
                     temp_r = rotate_list[i][0]
                     temp_c = rotate_list[i][1]
                     matrix[temp_r][temp_c] = value[i-1]
+    
     
     def get_post_rotate_cells(self, r: int, c: int, n: int) -> list:
         x = 0
@@ -41,14 +42,7 @@ class Solution:
         cells.append((int(mid + c_dif), int(mid - r_dif)))
         
         return cells
-
     
-    # def get_first_quadrant(self, r, c, n) -> int, int:
-    #     mid = n / 2
-    #     r_dif = r - n
-    #     c_dif = c - n
-    #     if r - n < 0 and c - n < 0:
-    #         return 
     
     def get_rotate_area(self, n):
         if n % 2 == 1:
