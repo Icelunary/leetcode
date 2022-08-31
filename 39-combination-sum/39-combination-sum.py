@@ -6,7 +6,7 @@ class Solution:
         return self.res
         
     def backtrack(self, candidates, track, target, currentSum, index):
-        if sum(track) == target:
+        if currentSum == target:
             # print("ok", track, index)
             self.res.append(track[:])
             # print(self.res)
