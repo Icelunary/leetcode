@@ -2,15 +2,14 @@ class Solution:
     def longestPalindrome(self, words: List[str]) -> int:
         cnt = {}
         self.countWords(cnt, words)
-        print(cnt)
-        res = ""
         picked, mid = self.pickWords(cnt)
-        print(picked, mid)
+        return (sum(picked.values()) * 2 + len(mid)) * 2
+    # You can get the string from here
+        res = ""
         for i in picked:
             for times in range(picked[i]):
                 res += i
         res += mid
-        print(res)
         res += res[::-1]
         return len(res)
     
