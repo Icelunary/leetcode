@@ -31,7 +31,6 @@ class Solution:
                 index += direction
                 direction = 1
             index += direction
-            # print(index, end=" ")
         return res
             
         
