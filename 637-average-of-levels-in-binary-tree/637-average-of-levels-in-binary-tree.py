@@ -15,8 +15,6 @@ class Solution:
         
     def traverse(self, root, level):
         if self.reachedLevel < level:
-            if self.reachedLevel + 1 < level:
-                print("Error")
             self.reachedLevel += 1
             self.res.append(0)
             self.levelNum.append(0)
