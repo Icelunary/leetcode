@@ -2,8 +2,6 @@ class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         self.grid = grid
         self.res = 0
-        for i in grid:
-            print(i)
         rowNum = len(grid)
         colNum = len(grid[0])
         for r in range(rowNum):
