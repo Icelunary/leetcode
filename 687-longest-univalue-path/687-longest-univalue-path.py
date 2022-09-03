@@ -19,9 +19,6 @@ class Solution:
         double = left + right
         self.cnt = max(self.cnt, oneLine, double)
         if root.val == parentVal:
-            # oneLine = max(left, right)
-            # double = left + right
-            # self.cnt = max(self.cnt, oneLine, double)
             return oneLine + 1
         else:
             return 0
