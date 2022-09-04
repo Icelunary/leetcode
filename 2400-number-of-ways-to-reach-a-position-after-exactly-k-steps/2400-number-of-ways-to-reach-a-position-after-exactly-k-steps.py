@@ -11,7 +11,6 @@ class Solution:
         dis = k - rightStep
         test = 0
         print(k, rightStep, dis)
-        return comb(k, rightStep) % (10 ** 9 + 7)
         # for i in range(k, rightStep, -1):
         #     self.cnt *= i
         for i in range(rightStep + 1, k + 1):
@@ -19,7 +18,7 @@ class Solution:
 
         for i in range(1, dis + 1):
             self.cnt //= i
-        return self.cnt
+        return self.cnt % (10 ** 9 + 7)
     
     def countRightStep(self, pos, endPos, k):
         if endPos >= pos:
