@@ -11,6 +11,7 @@ class Solution:
         dis = k - rightStep
         test = 0
         print(k, rightStep, dis)
+        return comb(k, dis) % (10 ** 9 + 7)
         # for i in range(k, rightStep, -1):
         #     self.cnt *= i
         for i in range(rightStep + 1, k + 1):
