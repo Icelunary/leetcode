@@ -10,9 +10,6 @@ class Solution:
             rightStep = self.countRightStep(startPos, endPos, k)
         dis = k - rightStep
         test = 0
-        print(k, rightStep, dis)
-        # for i in range(k, rightStep, -1):
-        #     self.cnt *= i
         for i in range(rightStep + 1, k + 1):
             self.cnt *= i
 
