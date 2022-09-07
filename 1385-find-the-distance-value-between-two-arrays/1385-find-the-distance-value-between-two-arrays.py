@@ -20,5 +20,3 @@ class Solution:
                 return self.bs(arr2, start, mid - 1, target, d)
             elif num < target:
                 return self.bs(arr2, mid + 1, end, target, d)
-            else:
-                return
