@@ -20,13 +20,11 @@ class Solution:
         while r != m:
             c = s2[r]
             # if exist
-            print(c)
             if c in cnt:
                 # if still need
                 if cnt[c]:
                     cnt[c] -= 1
                     need -= 1
-                    # print("get one", cnt, need)
                     if need == 0:
                         return True
                 # if no need, move L
@@ -38,10 +36,7 @@ class Solution:
                         cnt[c1] += 1
                         l += 1
                         need += 1
-                    #     print(c1, cnt, l)
-                    # print("move left", l, cnt, need)
             else:
-                # print("restart")
                 need = need_ori
                 cnt = cnt_ori.copy()
                 l = r + 1
