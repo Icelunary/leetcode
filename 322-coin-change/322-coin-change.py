@@ -16,26 +16,6 @@ class Solution:
                     # print(dp)
                 elif coins[r-1] > c:
                     dp[r][c] = dp[r-1][c]
-                # for i in dp:
-                #     print(i)
-                # print()
-        # print(dp)
-        # print("end")
         if dp[n][amount] == math.inf:
             return -1
         return dp[n][amount]
-                
-                
-                
-#                 if coins[r - 1] < c:
-#                     if dp[r-1][c]:
-#                         dp[r][c] = dp[r-1][c-coins[r-1]] + 1
-#                     else:
-#                         dp[r][c] = max(dp[r-1][c-coins[r-1]] + 1, dp[r-1], c)
-#                 else:
-#                     dp[r][c] = dp[r-1][c]
-#                     if dp[r - 1][amount]:
-#                         0
-#                     # if can only put in
-#                     else:
-#                         dp[r][c] = dp[r-1][c - coins[r - 1]]
