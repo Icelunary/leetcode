@@ -8,12 +8,8 @@ class Solution:
             for c in range(1, amount + 1):
                 if coins[r-1] == c:
                     dp[r][c] = 1
-                    # print(dp)
                 elif coins[r-1] < c:
-                    # print(coins[r-1], c)
-                    # print(dp[r-1][c-coins[r-1]] + 1, dp[r-1][c], dp[r][c-coins[r-1]] + 1)
                     dp[r][c] = min(dp[r-1][c-coins[r-1]] + 1, dp[r-1][c], dp[r][c-coins[r-1]] + 1)
-                    # print(dp)
                 elif coins[r-1] > c:
                     dp[r][c] = dp[r-1][c]
         if dp[n][amount] == math.inf:
