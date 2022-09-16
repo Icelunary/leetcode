@@ -13,7 +13,4 @@ class Solution:
                     dp[r][k] = dp[r-1][k]
                 else:
                     dp[r][k] = dp[r-1][k] + dp[r][k-coin]
-                # for i in dp:
-                #     print(i)
-                # print()
         return dp[n][amount]
