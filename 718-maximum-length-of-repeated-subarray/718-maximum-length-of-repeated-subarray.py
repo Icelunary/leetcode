@@ -4,6 +4,7 @@ class Solution:
         m = len(nums2)
         if not n or not m:
             return 0
+        # dp[i][j] means the max common sub arrays ending in i and j
         dp = [[0 for i in range(m + 1)] for j in range(n + 1)]
         res = 0
         for r in range(1, n + 1):
