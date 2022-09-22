@@ -12,7 +12,7 @@ class Solution:
             a, b = b - a, a
         return res
     
-        """ Below is my dp solution, TLE"""
+        """ Below is my dp solution, TLE, btw, I forgot a FN can be used multiple times"""
         arr = [1, 1]
         while arr[-1] < k:
             arr.append(arr[-1] + arr[-2])
