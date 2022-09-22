@@ -3,9 +3,6 @@ class Solution:
         dp = {}
         res = 0
         for num in arr:
-            if num - difference in dp:
-                dp[num] = 1 + dp[num - difference]
-            else:
-                dp[num] = 1
+            dp[num] = 1 + dp[num - difference] if num - difference in dp else 1
             res = max(res, dp[num])
         return res
