@@ -22,7 +22,6 @@ class Solution:
             if node not in visitedNode:
                 groups += 1
                 extra += self.bfs(node, myG, visitedEdge, visitedNode)
-                print(extra)
         # print(myG)
         return groups - 1
         
