@@ -20,7 +20,7 @@ class Solution:
         if (n, target) in self.dp:
             return self.dp[(n, target)]
         temp = 0
-        for i in range(1, k + 1):
+        for i in range(1, min(k+1, target + 1)):
             temp += self.track(n-1, k, target - i)
             # print(self.dp, temp)
         self.dp[(n, target)] = temp
