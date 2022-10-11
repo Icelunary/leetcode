@@ -20,3 +20,16 @@ class Solution:
                 record = min(record, num)
             # print(mi, ma, record)
         return False
+    
+"""From discuss, it's actually the same but mine code look worse
+def increasingTriplet(nums):
+    first = second = float('inf')
+    for n in nums:
+        if n <= first:
+            first = n
+        elif n <= second:
+            second = n
+        else:
+            return True
+    return False
+"""
