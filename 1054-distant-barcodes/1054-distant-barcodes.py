@@ -5,6 +5,29 @@ class Solution:
         cnt = collections.defaultdict(int)
         for i in barcodes:
             cnt[i] += 1
+        pos = 0
+        res = [0 for i in range(n)]
+        ma = max(cnt, key=cnt.get)
+        # print(ma)
+        for i in range(cnt[ma]):
+            res[pos] = ma
+            pos += 2
+            if pos >= n:
+                pos = 1
+        del cnt[ma]
+        for code in cnt:
+            for i in range(cnt[code]):
+                res[pos] = code
+                pos += 2
+                if pos >= n:
+                    pos = 1
+        return res
+    
+        """ my O(nlogn) solution
+        n = len(barcodes)
+        cnt = collections.defaultdict(int)
+        for i in barcodes:
+            cnt[i] += 1
         # print(cnt)
         res = []
         maxheap = []
@@ -32,3 +55,4 @@ class Solution:
         #     print(res)
         # print(res)
         return res
+        """
