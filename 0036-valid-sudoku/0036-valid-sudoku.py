@@ -36,6 +36,6 @@ class Solution:
                         else:
                             if s != ".":
                                 bloCheck.add(s)
-                        print(bloCheck)
+                        
         
         return True
