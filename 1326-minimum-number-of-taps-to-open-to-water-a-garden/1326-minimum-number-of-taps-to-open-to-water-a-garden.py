@@ -1,34 +1,26 @@
 class Solution:
     def minTaps(self, n: int, ranges: List[int]) -> int:
-        # https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/discuss/3983936/3-Minutes-To-Realise-Greedy-Approach-Beats-99
-        # thanks to mchlkrpch's solution in discussion
-        # following solution is inspired by him/her
         arr = [0] * (n + 1)
-        ans = 0
-        
-        for i in range(len(ranges)):
-            if ranges[i] == 0:
+        for idx, cur_radius in enumerate(ranges):
+            if cur_radius == 0:
                 continue
             
-            left = max(0, i - ranges[i])
-            right = min(n, i + ranges[i])
-            arr[left] = max(right, arr[left])
-        # print(arr)
-        pre = 0
-        uncover = 0
-        while uncover < n:
-            nex = 0
-            for i in range(pre, uncover + 1):
-                # print(i, arr[i],  "uncover: ", uncover, max(uncover, arr[i]))
-                nex = max(nex, arr[i])
-            # print(pre, uncover, nex)
-            if nex <= uncover:
-                return -1
-            pre, uncover = uncover + 1, nex
-                
-            ans += 1
-            
-        return ans
+            left_border_idx = max(0, idx - cur_radius)
+            arr[left_border_idx] = max(arr[left_border_idx], idx + cur_radius)
+
+        right_border_of_watered_points = 0
+        ans, watered_on_cur_step = 0, 0
+
+        for idx, right_border in enumerate(arr):
+            if idx > watered_on_cur_step:
+                if right_border_of_watered_points <= watered_on_cur_step:
+                    return -1
+                ans += 1
+                watered_on_cur_step = right_border_of_watered_points
+
+            right_border_of_watered_points = max(right_border_of_watered_points, right_border)
+
+        return ans + (watered_on_cur_step < n)
         
         
         # my solution
