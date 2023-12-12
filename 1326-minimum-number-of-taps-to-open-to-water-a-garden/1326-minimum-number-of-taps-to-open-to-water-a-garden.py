@@ -15,7 +15,7 @@ class Solution:
         tap = 0
         
         # we haven't cover all tap
-        while uncover <= n:
+        while uncover < n:
             # current uncovered tap cannot be covered
             if idx >= len(intervals) or intervals[idx][0] > uncover:
                 return -1
@@ -33,7 +33,5 @@ class Solution:
             
             uncover = r
             tap += 1
-            if r == n:
-                return tap
         
         return tap
