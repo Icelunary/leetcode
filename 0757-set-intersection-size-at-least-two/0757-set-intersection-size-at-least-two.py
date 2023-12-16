@@ -56,7 +56,6 @@ class Solution:
         size = 0
         prev_start = -1
         prev_end = -1
-        print(intervals)
         # the first one is always not overlap case
         # second one is always edge to edge
         for curr_start, curr_end in intervals:
