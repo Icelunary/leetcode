@@ -12,6 +12,4 @@ class Solution:
                 lo1 = num
             elif num < lo2 or lo2 == -1:
                 lo2 = num
-            # print(lo1, lo2, hi2, hi1)
-        # print(lo1, lo2, hi2, hi1)
         return (hi1 * hi2) - (lo1 * lo2)
