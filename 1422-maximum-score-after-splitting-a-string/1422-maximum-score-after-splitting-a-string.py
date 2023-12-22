@@ -14,6 +14,4 @@ class Solution:
         for i in range(1, n):
             cur = num0[i] + num1[-1] - num1[i]
             ans = max(ans, cur)
-        print(num0)
-        print(num1)
         return ans
