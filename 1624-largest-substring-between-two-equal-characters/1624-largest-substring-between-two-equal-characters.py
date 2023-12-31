@@ -1,6 +1,6 @@
 class Solution:
     def maxLengthBetweenEqualCharacters(self, s: str) -> int:
-        mySet = defaultdict(int)
+        mySet = {}
         ans = -1
         for i in range(len(s)):
             c = s[i]
