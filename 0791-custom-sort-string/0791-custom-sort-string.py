@@ -1,7 +1,6 @@
 class Solution:
     def customSortString(self, order: str, s: str) -> str:
         record = Counter(s)
-        print(record)
         ans = ""
         for c in order:
             while record[c]:
